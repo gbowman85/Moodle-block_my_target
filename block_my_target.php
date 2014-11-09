@@ -59,6 +59,8 @@ class block_my_target extends block_base {
 				$this->content->text = get_string('instructions', 'block_my_target', $url);
 				return $this->content;
 			}
+		} else if (!$grade_item) { // Not a teacher and no grade item of 'Target' set
+			return false;
         }
 
 		// Get the stored grade
