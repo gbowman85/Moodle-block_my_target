@@ -43,7 +43,6 @@ class block_my_target extends block_base {
 		$coursecontext = $context->get_course_context();
 		$courseid = $coursecontext->instanceid;
 		
-			
 		// Get target grade_item
 		$grade_item = grade_item::fetch(array('courseid'=>$courseid,'itemname'=>'Target'));
 		
@@ -74,8 +73,6 @@ class block_my_target extends block_base {
 		
 		// Format the target grade
 		$targetgrade = grade_format_gradevalue($grade->finalgrade, $grade_item, true);
-		
-
 		
 		// Return the content
 		$this->content->text='<span class="target">'.$targetgrade.'</span>';
